@@ -3,7 +3,13 @@
 
 AC_PREREQ([2.69])
 AC_INIT( ape , [1.0] )
-AM_INIT_AUTOMAKE
+AC_CONFIG_AUX_DIR([BLD])
+AC_CONFIG_MACRO_DIR([m4])
+
+AM_INIT_AUTOMAKE([foreign -Wall -Werror])
+
+LT_PREREQ([2.2])
+LT_INIT([disable-static])
 
 AC_CONFIG_FILES([Makefile
                  src/Makefile
