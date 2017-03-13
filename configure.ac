@@ -7,6 +7,7 @@ AC_CONFIG_AUX_DIR([aux])
 AC_CONFIG_MACRO_DIR([m4])
 
 AM_INIT_AUTOMAKE([foreign -Wall -Werror])
+AM_MAINTAINER_MODE([enable])
 AM_PROG_AR
 
 LT_PREREQ([2.2])
@@ -28,6 +29,7 @@ AC_CONFIG_SRCDIR([src/pil_error.c])
 
 # Checks for programs.
 AC_PROG_CC
+AM_PROG_CC_C_O
 
 # Checks for libraries.
 AC_SEARCH_LIBS([clear_history] , [readline] ,
